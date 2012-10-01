@@ -9,6 +9,7 @@ gem 'rails', '3.2.8'
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 # Gems used only for assets and not required
@@ -44,6 +45,10 @@ gem 'jquery-rails'
 
 group :test do
   gem 'capybara'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'guard-spork'
+  gem 'spork'
 end
 
 group :production do
