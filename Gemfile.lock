@@ -55,6 +55,11 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
     ffi (1.1.5)
     guard (1.4.0)
       listen (>= 0.4.2)
@@ -62,8 +67,8 @@ GEM
     guard-rspec (2.0.0)
       guard (>= 1.1)
       rspec (~> 2.11)
-    guard-spork (1.2.0)
-      childprocess
+    guard-spork (1.2.1)
+      childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
       sys-proctable
@@ -74,10 +79,11 @@ GEM
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
     json (1.7.5)
-    libnotify (0.5.9)
+    libnotify (0.8.0)
+      ffi (>= 1.0.11)
     libwebsocket (0.1.5)
       addressable
-    listen (0.5.2)
+    listen (0.5.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -166,6 +172,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   coffee-rails (~> 3.2.1)
+  factory_girl_rails
   guard-rspec
   guard-spork
   jquery-rails

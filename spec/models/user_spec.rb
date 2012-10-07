@@ -3,8 +3,8 @@
 # Table name: users
 #
 #  id              :integer          not null, primary key
-#  firstname       :string(255)
-#  lastname        :string(255)
+#  first_name      :string(255)
+#  last_name       :string(255)
 #  email           :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
@@ -16,15 +16,15 @@ require 'spec_helper'
 describe User do
   
   before do
-    @user = User.new(firstname: "Example", lastname: "User", 
+    @user = User.new(first_name: "Example", last_name: "User", 
                     email: "user@example.com", password: "foobar",
                     password_confirmation: "foobar")
   end
   
   subject { @user }
 
-  it { should respond_to(:firstname) }
-  it { should respond_to(:lastname) }
+  it { should respond_to(:first_name) }
+  it { should respond_to(:last_name) }
   it { should respond_to(:email) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
@@ -33,13 +33,13 @@ describe User do
 
   it { should be_valid }
 
-  describe "when firstname is not present" do
-    before { @user.firstname = " " }
+  describe "when first_name is not present" do
+    before { @user.first_name = " " }
     it { should_not be_valid }
   end
 
-  describe "when lastname is not present" do
-    before { @user.lastname = " " }
+  describe "when last_name is not present" do
+    before { @user.last_name = " " }
     it { should_not be_valid }
   end
 
@@ -48,13 +48,13 @@ describe User do
     it { should_not be_valid }
   end
 
-  describe "when firstname is too long" do
-    before { @user.firstname = "a" * 51 }
+  describe "when first_name is too long" do
+    before { @user.first_name = "a" * 51 }
     it { should_not be_valid }
   end
 
-  describe "when lastname is too long" do
-    before { @user.lastname = "a" * 51 }
+  describe "when last_name is too long" do
+    before { @user.last_name = "a" * 51 }
     it { should_not be_valid }
   end
 
